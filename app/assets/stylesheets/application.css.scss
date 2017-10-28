@@ -44,9 +44,9 @@ h1, h2, h3 {
 
 .navbar-default .navbar-brand,
 .navbar-default .navbar-nav > li > a{
-  color:white;
+  color:black;
   &:hover {
-    color: black;
+    color: white;
     opacity: 0.75;
   }
 }
