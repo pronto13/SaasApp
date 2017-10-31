@@ -1,0 +1,18 @@
+ActiveRecord
+  is rails way querrying the database
+  is the 'm' in the MVC
+  models need schema
+  object relational mapping system, don't need to program in sql
+  should learn sql tho
+  '.to_sql'
+  querry - > go look in the db and find somethin
+  2 ways to send data in the interweb
+  querry string parameter - everything that comes after '?' in the url
+  2nd parameter -> POST data.
+  can send as many piece of data thru querry string parameter
+  path(key1: value1, key2: value2,...keyN: valueN)
+
+Substitution
+  idea of mentally interchanging what you see when coding
+  
+  
