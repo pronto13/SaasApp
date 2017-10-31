@@ -21,3 +21,9 @@ Substitution
   if GET req. s'got a parameter(s), rail then create a hash. Parameters hash
   can check/access it with param[:key] == value 
   
+#103 Partials and Card Fields
+  _name.html underscore means it's a partial form that you can refer on another page by removing the underscore
+  <%= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month" } %>
+  <%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year" } %>
+  ^ rails heavyliftin
+
