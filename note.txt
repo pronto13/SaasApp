@@ -6,7 +6,7 @@ ActiveRecord
   object relational mapping system, don't need to program in sql
   should learn sql tho
   '.to_sql'
-  query - > go look in the db and find somethin
+  query means - go look in the db and find somethin
   2 ways to send data in the interweb
   query string parameter -parameter(s) that comes after '?' in the url
   2nd way -> POST data.
@@ -26,4 +26,30 @@ Substitution
   <%= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month" } %>
   <%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year" } %>
   ^ rails heavyliftin
+  
+#106 Explanation of Figaro
+  stripe, figaro 2 spaces, not tab, in production .yml file (y tho?)
+  .gitignore --> generated when we set up git
+  filled with files that git ignores whenever we do push
+  or deployment
+  don't share your api keys! duh
+  /config/initializers - filled with things that run when you start your app.
+  ENV - > way of reaching figaro file .yml,  to grab the api keys
+  
+#107 Stripe requirements
+  3 steps with stripe
+  1. User js to send card info to stripe
+  js pause the form when sign up button is clicked, not submit it to our server, no cc info in server!
+  the script takes the cc field and send it to stripe server
+  stripe will store the info and send back card token to us
+  and js store it as a hidden field
+  2. Validate user registration on our rails app server
+  take form 1 info, email and password as well as hidden card token and plan id
+  send the info to our rails app server and validate it
+  3. Rails app will send user info to Stripe to create the subscription and finally save user to our db
+  once validated. we send the infos to stripe
+  then stripe create a subscription and create user out of the info
+  stripe then send another token, a customer token which we will store in our db
+  all 3 need to be scripted. code code *check requirements.txt
+  
 

@@ -1,0 +1,31 @@
+###Terminal
+
+heroku addons:create mailgun:starter
+(You should be prompted to verify card information at heroku.com/verify)
+heroku addons:create mailgun:starter
+heroku domains
+###config/environment.rb
+
+...
+ActionMailer::Base.smtp_settings = {
+  :port           => ENV['MAILGUN_SMTP_PORT'],
+  :address        => ENV['MAILGUN_SMTP_SERVER'],
+  :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
+  :password       => ENV['MAILGUN_SMTP_PASSWORD'],
+  :domain         => 'shrouded-fortress-66409.herokuapp.com',
+  :authentication => :plain,
+}
+ActionMailer::Base.delivery_method = :smtp
+...
+###Terminal
+
+git add .
+git commit -m "Added mailer settings to environment file"
+git push origin master
+git push heroku master
+
+*mailgun verfication code
+*Add recipients (sandbox domain)
+*invite new recipients. fill it with your email address
+*confirmation
+*
