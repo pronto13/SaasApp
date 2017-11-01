@@ -52,6 +52,18 @@ Substitution
   stripe then send another token, a customer token which we will store in our db
   all 3 need to be scripted. code code *check requirements.txt
   
-#
+#118 Stripe (e-Commerce) review
+  form - js - hijack form - send card info to stripe - stripe validate and process
+  stripe send card token to us - get customer email and stuff - send it along with card token to stripe
+  stripe then send customer token and make a subscription out of it.
+  we only store the customer token.
+  models files
+  we write function that are related to our models
+  all objects if we want to have certain capabilites not just attributes
+  write the function in models/
+  self = currentuser. when people simultaneously register use self
+  to keep the program process individual data correctly. self
   
-
+  
+  
+  
