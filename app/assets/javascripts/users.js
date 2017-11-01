@@ -1,9 +1,8 @@
 /* global $, Stripe */
-// PCI COMPLIANT!!
 //Document ready.
 $(document).on('turbolinks:load', function(){
-  var theForm = $('#pro_form');
-  var submitBtn = $('#form-submit-btn');
+  var theForm = $( '#pro_form' );
+  var submitBtn = $( '#form-signup-btn' );
   
   //Set Stripe public key.
   Stripe.setPublishableKey( $('meta[name="stripe-key"]').attr('content') );
@@ -33,7 +32,7 @@ $(document).on('turbolinks:load', function(){
     alert('The CVC number appears to be invalid');
   }
   
-  if (!Stripe.card.validatevalidateExpiry(expMonth, expYear)) {
+  if (!Stripe.card.validateExpiry(expMonth, expYear)) {
     error = true;
     alert('The credit card expiration date appears to be invalid');
   }
@@ -64,7 +63,8 @@ $(document).on('turbolinks:load', function(){
   
 
   //Submit form to our Rails app
-  theForm.get(0).submit(); //get(0) array
+  theForm.get(0).submit();
+  
   }
   
 });
