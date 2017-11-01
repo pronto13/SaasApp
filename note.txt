@@ -52,4 +52,6 @@ Substitution
   stripe then send another token, a customer token which we will store in our db
   all 3 need to be scripted. code code *check requirements.txt
   
+#
+  
 
