@@ -32,7 +32,7 @@ ActiveRecord
   .gitignore --> generated when we set up git
   filled with files that git ignores whenever we do push
   or deployment
-  don't share your api keys! duh
+  don't share your api keys! 
   /config/initializers - filled with things that run when you start your app.
   ENV - > way of reaching figaro file .yml,  to grab the api keys
   
@@ -99,4 +99,22 @@ ActiveRecord
   action means url that it will be submitted to
   Capital  in Name.new - > referring to model files
   Name.new - instantiating object from a class in its corresponding model
+  
+#129 Profiles Create Action
+  click submit - hit rails app
+  run create action in profile controller
+  1st grab the user in our params (User.find)
+  check home. when you click create profile you make a request
+  with your current user id which gets stored in params
+  @instancevariable. build_profile
+  build_profile special function
+  special function you use in building an association
+  build - > similar to .new. create association in db
+  create a blank object in profile memory
+  but association. in this case user and profile
+  sidenote. build_profile(any object name) if it's a singular
+  if has_many. profiles(any object name)_build -
+  strong parameters -> .permit
+  render different than redirect
+  render doesn't do another requets. just show you another view file in the same request
   
