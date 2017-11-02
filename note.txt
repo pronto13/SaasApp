@@ -12,8 +12,8 @@ ActiveRecord
   2nd way -> POST data.
   can send as many piece of data thru querry string parameter
   path(parameterkey1: value1, parameterkey2: value2,...parameterkeyN: valueN)
-
-Substitution
+  qsp - path(key: value)(key+value makes the parameter)
+  Substitution
   idea of mentally interchanging what you see when coding
   
 #101 Accessing Parameters
@@ -24,7 +24,7 @@ Substitution
 #103 Partials and Card Fields
   _name.html underscore means it's a partial form that you can refer on another page by removing the underscore
   <%= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month" } %>
-  <%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year" } %>
+  <%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+n}, {name: nil, id: "card_year" } %>
   ^ rails heavyliftin
   
 #106 Explanation of Figaro
@@ -71,5 +71,24 @@ Substitution
     routetype2 : name2
   end
   
+#125 Dynamic Routes
+  controller action - corresponding view
+  instance variable (@variable) defined inside a controller
+  so you can also use it in its corresponding view files
+  normal variable in controller doesn't work in views
+  function in a controller files is called action
+  controller#action
+  action - corresponding view files. with the same name file
+  sidenote. you can write instance var inside a view files
+  it'll override the instance variable inside your controller if they both have the same name
+  qsp in a route with a dynamically generated value in url pattern (dynamic routes) (: colon) it'll
+  it'll just stick the value in inside the url. (no ?)
+  :key => value = old syntax for qsp
+  qsp can be used in view files with (params)
+  special function in views. debug (params)
+  <%= debug(params) if Rails.env.development? %>
+  if... - > only show the debug in development
+  params hash can do it in view files and in controller
+  can see params hash in server log too
   
   

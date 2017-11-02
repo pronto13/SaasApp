@@ -2,7 +2,8 @@ class ProfilesController < ApplicationController
 
   # GET to /users/:user_id/profile/new
   def new
-    # Render blank profile details form
+    # Create a blank list in the machine memory
+    @profile = Profile.new
     
   end
 end
