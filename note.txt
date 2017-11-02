@@ -118,3 +118,20 @@ ActiveRecord
   render different than redirect
   render doesn't do another requets. just show you another view file in the same request
   
+#131 Users Show
+  make controller users_controller - make view users-show
+  why user and not profile ?
+  cause user may have another thing to view beside profiles
+  in the future
+  REST Representaional State Transfer
+  rails built with REST
+  .find to grab from db
+  check routes format when you make an action in controller
+  .inspect - get readout
+  
+#133 User Profile Page
+  how to output data from db onto single resource
+  using show action
+  
+  
+  
