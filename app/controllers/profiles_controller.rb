@@ -1,5 +1,10 @@
 class ProfilesController < ApplicationController
-
+  # Securing User Pages, before_action :authenticate user! provided by devise
+  # You can limit the before_action by using 'only' so only listed action gets authenticated
+  # before_action :authenticate_user!, only [:action1, :action2]
+  before_action :authenticate_user!
+  # Prevent an user to edit another user's profile, need to create a new function for it see line56
+  before_action :only_current_user
   # GET to /users/:user_id/profile/new
   def new
     # Create a blank list in the machine memory
@@ -49,4 +54,10 @@ class ProfilesController < ApplicationController
     def profile_params
       params.require(:profile).permit(:first_name, :last_name, :avatar, :job_title, :phone_number, :contact_email, :description)
     end
+    
+  def only_current_user
+    @user = User.find(params[:user_id])
+    # Go to homepage if the current_user(devise function) isn't matched
+    redirect_to(root_url) unless @user == current_user
+  end
 end
