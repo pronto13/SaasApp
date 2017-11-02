@@ -91,4 +91,12 @@ ActiveRecord
   params hash can do it in view files and in controller
   can see params hash in server log too
   
+#127 New Profiles Form
+  first line in _form, url: user_profile_path
+  specify the url to emphasize that it's a nested profile
+  when it submits it needs to be specific to the user that submitted it
+  in url - <form class .... action="users/id/profile"
+  action means url that it will be submitted to
+  Capital  in Name.new - > referring to model files
+  Name.new - instantiating object from a class in its corresponding model
   
