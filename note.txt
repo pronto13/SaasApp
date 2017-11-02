@@ -132,6 +132,9 @@ ActiveRecord
 #133 User Profile Page
   how to output data from db onto single resource
   using show action
+  chaining syntax after you createad association @instance.asociation.individual_atrribute
+  check url pattern when you create a link
+  
   
   
   
