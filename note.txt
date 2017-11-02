@@ -64,6 +64,12 @@ Substitution
   self = currentuser. when people simultaneously register use self
   to keep the program process individual data correctly. self
   
+#123 Explanation of Nested Routes
+  : in routes means it's interchangeable value
+  nested routes. 
+  routetype : name do
+    routetype2 : name2
+  end
   
   
   
