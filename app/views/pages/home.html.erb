@@ -1,29 +1,29 @@
 <div class="home-callout text-center container-fluid">
-    <h1>Welcome to 3Dudes</h1>
-    <h3>A membership site where rich people get to meet bums and hobos</h3>
+    <h1>Welcome</h1>
+    <h3>Text</h3>
 </div>
 <div class="container home-signup-links">
   <div class="row">
     <% if user_signed_in? %>
       <div class="col-md-6">
         <div class="well">
-          <h2 class="text-center">Your Profile</h2>
+          <h2 class="text-center">Profile</h2>
           <%if current_user.profile %>
-            <%= link_to "Edit your profile", edit_user_profile_path(user_id: current_user.id), class: 'btn btn-default btn-lg btn-block' %>
-            <%= link_to "View your profile", user_path(id: current_user.id), class: 'btn btn-default btn-lg btn-block' %>
+            <%= link_to "Edit profile", edit_user_profile_path(user_id: current_user.id), class: 'btn btn-default btn-lg btn-block' %>
+            <%= link_to "View profile", user_path(id: current_user.id), class: 'btn btn-default btn-lg btn-block' %>
           <% else %>
-            <p class="text-center"> Create your profile</p>
+            <p class="text-center"> Create profile</p>
             <br/>
-            <%= link_to "Create your profile", new_user_profile_path(user_id: current_user.id), class: 'btn btn-default btn-lg btn-block' %> 
+            <%= link_to "Create profile", new_user_profile_path(user_id: current_user.id), class: 'btn btn-default btn-lg btn-block' %> 
       <% end %>
         </div>
       </div> 
       <div class="col-md-6">
         <div class="well">
-          <h2 class="text-center">The Community</h2>
-          <p class ="text-center">Visit the community</p>
+          <h2 class="text-center">Index</h2>
+          <p class ="text-center">Text</p>
           <br/>
-          <%= link_to "Visit the community", users_path, class: 'btn btn-default btn-lg btn-block' %>
+          <%= link_to "Index", users_path, class: 'btn btn-default btn-lg btn-block' %>
         </div>
         
       </div>
@@ -31,15 +31,15 @@
     <% else %>
       <div class= "col-md-6">
         <div class = "well">
-          <h2 class ="text-center">Basic Membership</h2>
-          <h4 class ="text-center"> Sign up for free, this one is for you bums and hobos</h4><br/>
+          <h2 class ="text-center">Basic</h2>
+          <h4 class ="text-center">Text</h4><br/>
           <%= link_to "Sign up with Basic", new_user_registration_path(plan: @basic_plan.id), class: 'btn btn-primary btn-lg btn-block' %>
         </div>
       </div>
         <div class="col-md-6">
           <div class = "well">
-          <h2 class ="text-center">Pro Membership</h2>
-          <h4 class ="text-center"> Sign up for $10/month and feed us</h4><br/>
+          <h2 class ="text-center">Pro</h2>
+          <h4 class ="text-center">Text</h4><br/>
           <%= link_to "Sign up with Pro", new_user_registration_path(plan: @pro_plan.id), class: 'btn btn-success btn-lg btn-block' %>
           </div>
         </div>
