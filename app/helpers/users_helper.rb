@@ -3,12 +3,11 @@
 
 module UsersHelper
   def job_title_icon
-    if @user.profile.job_title == "Job1"
+    if @user.profile.job_title == "Debtor"
       "<i class ='fa fa-dollar'></i>".html_safe
-    elsif @user.profile.job_title == "Job2"
+    elsif @user.profile.job_title == "Investor"
       "<i class ='fa fa-dollar'></i>".html_safe
-    elsif @user.profile.job_title == "Job3"
-      "<i class = 'fa fa-dollar'></i>".html_safe
+    
     end  
   end
 end
